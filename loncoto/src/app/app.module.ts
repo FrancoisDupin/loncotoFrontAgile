@@ -1,16 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
 import { AppComponent } from './app.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
+import { RouterModule } from "@angular/router";
+import { AccueilComponent } from './components/accueil/accueil.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavBarComponent,
+    AccueilComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(
+      [
+        { path:'accueil', component: AccueilComponent },
+        { path:'', redirectTo: '/accueil', pathMatch: 'full' }
+      ]      
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
