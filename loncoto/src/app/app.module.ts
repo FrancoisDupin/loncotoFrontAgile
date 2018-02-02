@@ -24,6 +24,7 @@ import { AccueilComponent } from './components/accueil/accueil.component';
     RouterModule.forRoot(
       [
         { path:'accueil', component: AccueilComponent },
+        { path:'articles', component: ArticleListeComponent },
         { path:'', redirectTo: '/accueil', pathMatch: 'full' }
       ]      
     )
