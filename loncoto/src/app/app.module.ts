@@ -9,6 +9,8 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 import { RouterModule } from "@angular/router";
 import { AccueilComponent } from './components/accueil/accueil.component';
+import { ArticleRepositoryService } from './services/article-repository.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { AccueilComponent } from './components/accueil/accueil.component';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     PaginationModule.forRoot(),
     RouterModule.forRoot(
       [
@@ -29,7 +32,7 @@ import { AccueilComponent } from './components/accueil/accueil.component';
       ]      
     )
   ],
-  providers: [],
+  providers: [ArticleRepositoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

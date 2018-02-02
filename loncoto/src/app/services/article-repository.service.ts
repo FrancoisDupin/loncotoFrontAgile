@@ -6,7 +6,7 @@ import { Page } from '../metier/Page';
 import { Article } from '../metier/Article';
 
 
-Injectable()
+@Injectable()
 export class ArticleRepositoryService {
 
 
@@ -14,7 +14,7 @@ export class ArticleRepositoryService {
   private articleSubject: BehaviorSubject<Page<Article>>;
   private searchName: string; //recherche sur le nom
 
-  private baseUrl: string="http://localhost:8080/extendedapi/articles";
+  private baseUrl: string="http://localhost:8080/extendedapi";
   private apiUrl: string="http://localhost:8080/api/";
   private numPage:number;
 
