@@ -8,7 +8,7 @@ import { OnDestroy } from '@angular/core/src/metadata/lifecycle_hooks';
 })
 export class ArticleListeComponent implements OnInit,OnDestroy {
   ngOnDestroy(): void {
-    throw new Error("Method not implemented.");
+    
   }
 
   constructor() { }
